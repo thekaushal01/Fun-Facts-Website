@@ -1,17 +1,28 @@
 const facts = [
-    "The Marvel Cinematic Universe began with the release of 'Iron Man' in 2008.",
-    "Robert Downey Jr. was the first actor cast in the MCU, playing Tony Stark/Iron Man.",
-    "The MCU is divided into phases, with each phase consisting of a series of interconnected films.",
-    "The Avengers, released in 2012, was the first film to bring together multiple superheroes from different MCU films.",
-    "The MCU is known for its post-credit scenes, which often tease future films or plotlines.",
-    "The character of Thanos, portrayed by Josh Brolin, is the main antagonist in the Infinity Saga.",
-    "Black Panther, released in 2018, was the first MCU film to win an Academy Award.",
-    "The MCU has expanded to include television series on Disney+, starting with 'WandaVision' in 2021.",
-    "The MCU's highest-grossing film is 'Avengers: Endgame', which surpassed $2.7 billion worldwide.",
-    "Stan Lee, co-creator of many Marvel characters, made cameo appearances in most MCU films until his passing in 2018."
+  "Iron Man's suit was inspired by a mix of real-world technology and creative design. It’s a symbol of Tony Stark’s personality.",
+  "The first MCU movie, Iron Man (2008), was almost entirely funded by Marvel themselves, marking a huge gamble.",
+  "The Hulk's massive size in the MCU was achieved through motion capture, with actor Mark Ruffalo giving the performance.",
+  "Chris Hemsworth originally auditioned for the role of Thor while he was training for a role in a different film.",
+  "The character of Black Widow was not originally planned to have her own solo film, but fan interest made it happen.",
+  "Robert Downey Jr. was so confident that Iron Man would be successful, he said: 'If this doesn't work, I’ll eat a tuna fish sandwich on camera.'",
+  "The Avengers' 'Team Cap vs. Team Iron Man' storyline in Civil War was inspired by a 2006 Marvel Comics event of the same name.",
+  "Tom Hiddleston (Loki) was a last-minute choice to play the villain in Thor, after several other actors were considered.",
+  "Stan Lee made cameo appearances in nearly every MCU movie before his passing in 2018. His last cameo was in Avengers: Endgame.",
+  "The character of Vision was created by combining the personalities of both Jarvis and Ultron in Avengers: Age of Ultron."
 ];
 
-document.getElementById('generateFactButton').addEventListener('click', function() {
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    document.getElementById('factDisplay').textContent = facts[randomIndex];
+const factElement = document.getElementById("fact");
+const newFactButton = document.getElementById("new-fact-btn");
+
+function generateRandomFact() {
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  factElement.textContent = randomFact;
+}
+
+
+generateRandomFact();
+
+
+newFactButton.addEventListener("click", () => {
+  generateRandomFact();
 });
