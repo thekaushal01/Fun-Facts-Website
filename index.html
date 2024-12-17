@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCU Fun Facts Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marvel Cinematic Universe - Fun Facts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Russo+One&family=Varela+Round&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpg">
 </head>
 <body>
     <div class="container">
-        <h1>Marvel Cinematic Universe Fun Facts</h1>
-        <button id="generateFactButton">Generate Fact</button>
-        <p id="factDisplay"></p>
+        <header>
+            <h1>Marvel Cinematic Universe Fun Facts</h1>
+        </header>
+
+        <div id="fact-container" class="fact-container">
+            <div class="fact-box">
+                <p id="fact">Loading fact...</p>
+            </div>
+            <button id="new-fact-btn">Generate New Fact</button>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Marvel Fans (Kaushal Kumar)</p>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
